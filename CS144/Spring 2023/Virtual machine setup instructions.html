@@ -1,0 +1,22 @@
+<!DOCTYPE html> <html xmlns=http://www.w3.org/1999/xhtml xml:lang lang>
+<meta charset=utf-8>
+<meta name=generator content=pandoc>
+<meta name=viewport content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Setting up your CS144 VM</title>
+<!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+<style><!--html,body{margin-left:3%;margin-right:auto;margin-top:1%;background-color:#F8E8F8}p{max-width:870px}a{color:#000000}html,body,p,li{font-family:"Source Serif Pro","Georgia","Times New Roman","DejaVu Serif",Times,serif}h1{font-family:"Source Sans Pro","Verdana","Arial",sans-serif;font-size:30pt;line-height:1.1em;font-weight:600}p,li{font-size:13pt;line-height:1.5em}--></style>
+<link type=image/x-icon rel="shortcut icon" href=data:image/vnd.microsoft.icon;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFlElEQVRYw72Xe0xTVxzHv7cP+oDyqFyKFWlkSsKz8owgBRXDiDrnIgESZoTInPERM61SwUhMDSiruMVFF0WjBpVUzeK2LsqSiRMEg4RZ1olhMYpQLJcij1Kg0N79QdZRKVCE7CT94/7O957z6bm/83sQmGWoSBJuAsHXoZmZciabDVeGbXwcOrX6G8vAwFdyippRS8yyOYPr7X02qbBwd/Plyxg2Gl0C4AmFiMrPR21Jyfcj797tkVOUbTotc6bN+b6+l5IKC79oOH0a/a9eYcxsdvgJV6yAzWKB6e1bB/uw0QiDVoskhSL2bXOzZC2gqTabbS4DqEiS5e7vX7m6oODzupMnMdTd7RQybu9eiKRSvH74cMrc2NAQupqakHTkyMpurTZ4DU3fdQbBcErF4RSvViiyHymVMPf0ON3ce9kyfJSWBjI8fNpPMWw04pFSicSCgmwWj3fcmcYpAJvH8x3s6MBIX9+0i5NhYWByOJAkJ0MklU6rG+nrQ//r13Dz8BC6DODK8JJIIBCLAYJARE7Ohy7zYQDLUlMRKJOBpmkQBIFBvR5MN7f/D6CzsRHdLS3254CEBERs2/ZBAKy5vrB840asLyuDO0nabX4REehqagKfJEHbpt42Np+/MADuIhHEMTFoPHsW4vh4BG/aZJ9bdeAA4vbtQ0N5uc1qsTg6Yn8/LEND8wcYMhjwu1IJ6fbtWJ6ebrdTOh3u7d//y+Lo6Je9bW31xhcv1M4i9LwBGGw2tlZVIVAmc7BLUlKw4dy59Kfnz9dyvLxCxfHxO0xdXb0Db958Kaeo3gVzwkCZDGR4OPSNjTBotXY7TdNYmpjI2HLtWvLimJh13hLJurg9ezJEkZH3VSQpXDAAk16PipgY6Kqq4BMUZLe/rK7GjQ0boL16FYZnz/DXrVv4ragIoZmZsaLIyPsqX1/hnABowOm97mltBd/PD2Aw8OzKFbs9KC0NsqIiNF+6hI7HjyfWsFpRU1yM0KysWJFUOu1JOAUY7eu7Pz4yMv7+twaAwc5O8Hx8EL1zp93WptHgcVkZrKOjjn/EakXNsWOQ5uXFunl4FLucDavN5tZQrfZFSEbGZwwWi9Hf3j5RPDCZ+OTiRYRlZ4PF5dr1i4KD4Rcejo76egzq9e8dJw3fkBD0PH/erKEojcs+IKcodUN5eY44Ls5+ErTViru5ufjBSdRjcbnYqlbD3c9v4SKhnKLUqvJyROXnXw+UyVgcT08EpaXBw99/ivbve/fw582bCx+K5RSlVlVU/AHAU5KScsrQ0pIMgPXxmTMOuqVJSQjLysLtzMxpCxiXAVQkmQ4g+n17d0tLb1R+PkuSkjI1QdXX4+eKCowODMz/BDienp9uvHBhV/ekYAMAbgIBAmUyBwf8d8Tu3g1pbi4uREXNH4BgMND19CnqVar/hDwettfUgM3ng7bZ0HL9+oQ/iEQO185/5Uq8evBg4euBoPXr0d/ejhvp6fhWIsGvBw9ifGQEZqMRbRoNKJ0ONE1jS2XlRKW00PVAR0MD2jSaKfl+2GjEj3l5E3nfwwNJCgUCEhPx/PbthQUwO+lwCMKxrxkzmfDg6NH5l2RjZnO3YMkS8BYtmqGnIsD18QGDyZxxA65QCC+JBBaTqdtlAOvoqLK2pORKUmEh3Cc52eSRIJeDIxBAEBAArre3Uw2fJCErKkJdaWnl+PCwci65wLYW+Enf2CharVDEUjodLIOD9vnwnBysOX4cBEGAwWJBHBeHjro6jPb32zUeYjESDh1CXWlphbmnZ4ecoqxz6g2rzWZ6HUFoOp888U44fHjVkMEABpuNoNRUpJ46BdakdO0ZEIDgzZth6uqCZXAQXoGBiNm1C7UnTnw3W3NKuNKes93dS0MyMuRMlms+ax0fR+udO+UWk6lgtvb8H1oILgG8hlOLAAAAAElFTkSuQmCC><link rel=canonical href=https://stanford.edu/class/cs144/vm_howto/><meta http-equiv=content-security-policy content="default-src 'none'; font-src 'self' data:; img-src 'self' data:; style-src 'unsafe-inline'; media-src 'self' data:; script-src 'unsafe-inline' data:; object-src 'self' data:; frame-src 'self' data:;"><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+<body>
+<header id=title-block-header>
+<h1 class=title>Setting up your CS144 VM</h1>
+</header>
+<p>The CS144 labs are designed to work with the GNU/Linux. You have four options for setting up your development machine:</p>
+<ol type=1>
+<li>On Intel/AMD computers: Use a <a href=https://stanford.edu/class/cs144/vm_howto/vm-howto-image.html>VM image that we prepared</a> in VirtualBox</li>
+<li>Use a <a href="https://docs.google.com/document/d/1HlpMwultnKx8d7o4YfBmsEkjJdVWvnS-ydIIJS9nR9A/edit?usp=sharing">Google Cloud virtual machine</a> using our class's coupon code
+<li>Use your own GNU/Linux installation with a C++20 compiler (GCC 12 or later, clang 15 or later)</li>
+<li>On ARM MacBooks and Macs: please install the <a href=https://mac.getutm.app/>UTM virtual machine software</a> and use our <a href=https://web.stanford.edu/class/cs144/vm_files/cs144-arm64-2023.utm.tar.gz>ARM64 GNU/Linux virtual machine image</a>
+</ol>
+<p>Because the labs were designed to use Linux-specific interfaces, we cannot support development on any other operating system—though you’re free to do whatever works for you, so long as the code you turn in works in the supported environment! It's unlikely that MacOS or Microsoft Windows (even with WSL) will be sufficient.</p>
